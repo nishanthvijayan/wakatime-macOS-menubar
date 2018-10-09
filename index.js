@@ -24,8 +24,10 @@ async function getCodingTime() {
       const minutes = (todayCodingTimeInMinutes % (60)).toFixed(0);
       console.log(`Coding: ${hours}h ${minutes}m`);
     },
-    (error) => {
+    () => {
       console.log('...');
+      console.log(DIVIDER);
+      console.log('Something went wrong..');
     },
   );
 }
