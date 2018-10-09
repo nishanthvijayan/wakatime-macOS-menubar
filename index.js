@@ -26,8 +26,6 @@ async function getCodingTime() {
     },
     (error) => {
       console.log('...');
-      console.log(DIVIDER);
-      console.log(error.response.data.error);
     },
   );
 }
