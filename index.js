@@ -20,8 +20,8 @@ async function getCodingTime() {
       const todayCodingTimeInMinutes = response.data.data
         .reduce((totalDuration, entry) => totalDuration + entry.duration, 0) / 60;
 
-      const hours = (todayCodingTimeInMinutes / (60)).toFixed(0);
-      const minutes = (todayCodingTimeInMinutes % (60)).toFixed(0);
+      const hours = Math.floor(todayCodingTimeInMinutes / (60));
+      const minutes = Math.floor(todayCodingTimeInMinutes % (60));
       console.log(`Coding: ${hours}h ${minutes}m`);
     },
     () => {
