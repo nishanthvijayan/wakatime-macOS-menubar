@@ -1,7 +1,7 @@
 const axios = require('axios');
-const { userID, apiKey } = require('./secrets.json');
+const { apiKey } = require('./secrets.json');
 
-const url = `https://wakatime.com/api/v1/users/${userID}/durations`;
+const url = `https://wakatime.com/api/v1/users/current/durations`;
 const DIVIDER = '---';
 
 const getTodaysDate = () => {
