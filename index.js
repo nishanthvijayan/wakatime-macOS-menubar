@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { apiKey } = require('./secrets.json');
 
-const url = `https://wakatime.com/api/v1/users/current/durations`;
+const url = 'https://wakatime.com/api/v1/users/current/durations';
 const DIVIDER = '---';
 
 const getTodaysDate = () => {
@@ -23,6 +23,8 @@ async function getCodingTime() {
       const hours = Math.floor(todayCodingTimeInMinutes / (60));
       const minutes = Math.floor(todayCodingTimeInMinutes % (60));
       console.log(`Coding: ${hours}h ${minutes}m`);
+      console.log(DIVIDER)
+      console.log('Open Dashboard | color=#123def href=https://wakatime.com/dashboard');
     },
     () => {
       console.log('...');
