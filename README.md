@@ -23,16 +23,16 @@ npm install
 npm run build
 ```
   
-A new folder named `dist/` would now appear. Inside `dist/` you'll find `wakatime.5m.sh`  
+A new folder named `dist/` would now appear. Inside `dist/` you'll find `wakatime.5m.js`  
   
   
-6. Change permissions of `wakatime.5m.sh` to make it executable
+6. Change permissions of `wakatime.5m.js` to make it executable
 ```
-chmod +x wakatime.5m.sh
+chmod +x wakatime.5m.js
 ```  
   
   
-7. Drop wakatime.5m.sh in your BitBar plugins folder.  
+7. Drop wakatime.5m.js in your BitBar plugins folder.  
 If you don't already have one, create a new folder anywhere and drop the script there.  
 Once you've launched BitBar, you can set this new folder as the plugins folder by selecting the `Change Plugins Folder`   
   
