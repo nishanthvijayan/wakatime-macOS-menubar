@@ -14,7 +14,7 @@ const params = {
   api_key: apiKey,
 };
 
-async function getCodingTime() {
+(() => {
   axios.get(url, { params }).then(
     (response) => {
       const todayCodingTimeInMinutes = response.data.data
@@ -23,7 +23,7 @@ async function getCodingTime() {
       const hours = Math.floor(todayCodingTimeInMinutes / (60));
       const minutes = Math.floor(todayCodingTimeInMinutes % (60));
       console.log(`Coding: ${hours}h ${minutes}m`);
-      console.log(DIVIDER)
+      console.log(DIVIDER);
       console.log('Open Dashboard | color=#123def href=https://wakatime.com/dashboard');
     },
     () => {
@@ -32,6 +32,4 @@ async function getCodingTime() {
       console.log('Something went wrong..');
     },
   );
-}
-
-getCodingTime();
+})();
